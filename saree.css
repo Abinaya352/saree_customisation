@@ -1,0 +1,237 @@
+@font-face {
+  font-family: myfont;
+  src: url(assests\amsterdam-signature.regular.ttf);
+}
+:root {
+	/* COLORS */
+	--white: #e9e9e9;
+	--gray: #333;
+	--pink: #ffeaea;
+	--lightpink: #ffd8d8;
+  
+    /* ... other styles ... */
+   
+
+	/* RADII 
+	--button-radius: 0.7rem;
+
+	
+	--max-width: 758px;
+	--max-height: 420px;
+
+	font-size: 16px;
+	font-family: Century Gothic Std,arial,sans-serif;*/
+}
+
+h1{
+  position: absolute;
+  top: 0;
+  transform: translateY(50%);
+  text-align: center;
+  width: 100%;
+  font-family: myfont;
+  color: black;
+  font-size: 40px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image:  linear-gradient(90deg, var(--pink) 0%, var(--lightpink) 74%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: myfont;
+
+  }
+ /* .header{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }*/
+  .container {
+    position: relative;
+    background-image: url('SareeLayout.png') ;
+   /* background-size:cover;*/
+   background-repeat: no-repeat;
+   background-position: center;
+    width: 900px;
+    height: 220px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+/*.container {
+    position: relative;
+    background-image: url('SareeLayout.png');
+    width: 900px;
+    height: 220px;
+}*/  
+  form {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-collapse: collapse;
+    border-color: #333;
+    border-width: 5rem solid;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  input[type="color"] {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="button"], input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+
+
+.patternOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    opacity: 0.5;
+    background-size: cover;
+}
+
+.overlayColor {
+    background-repeat: no-repeat;
+}
+
+.overlay1 {
+    top: 30px;
+    left: 450px;
+    width: 470px;
+    height: 175px;
+}
+
+.overlay2 {
+    top: 30px;
+    left: 550px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay3 {
+    top: 30px;
+    left: 650px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay4 {
+    top: 30px;
+    left: 750px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay5 {
+    top: 30px;
+    left: 850px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay6 {
+    top: 80px;
+    left: 500px;
+    width: 50px;
+    height: 50px;
+}
+
+.overlay7 {
+    top: 80px;
+    left: 600px;
+    width: 50px;
+    height: 50px;
+}
+
+.overlay8 {
+    top: 80px;
+    left: 700px;
+    width: 50px;
+    height: 50px;
+}
+
+.overlay9 {
+    top: 80px;
+    left: 800px;
+    width: 50px;
+    height: 50px;
+}
+
+.overlay10 {
+    top: 150px;
+    left: 450px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay11 {
+    top: 150px;
+    left: 550px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay12 {
+    top: 150px;
+    left: 650px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay13 {
+    top: 150px;
+    left: 750px;
+    width: 30px;
+    height: 30px;
+}
+
+.overlay14 {
+    top: 150px;
+    left: 850px;
+    width: 30px;
+   height: 30px;
+}

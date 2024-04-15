@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | LuxeLoom</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpeg" />
+    <link rel="stylesheet" href="sign.css" />
+  </head>
+  <body>
+    <div class="container right-panel-active">
+      <!-- Sign Up -->
+      <div class="container__form container--signup">
+        <form
+          action="signup.php"
+          method="POST"
+          class="form"
+          id="form1"
+          onsubmit="return validateSignUpForm()"
+        >
+          <h2 class="form__title">Sign Up</h2>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="input"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input"
+            required
+          />
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            class="input"
+            required
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            class="input"
+            required
+            pattern="[0-9]{10}"
+            title="Please enter a 10-digit phone number"
+          />
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- Sign In -->
+      <div class="container__form container--signin">
+        <form
+          action="signin.php"
+          method="POST"
+          class="form"
+          id="form2"
+          onsubmit="return validateSignInForm()"
+        >
+          <h2 class="form__title">Sign In</h2>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="input"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="input"
+            required
+          />
+          <button type="submit" class="btn">Sign In</button>
+        </form>
+      </div>
+
+      <!-- Overlay -->
+      <div class="container__overlay">
+        <div class="overlay">
+          <div class="overlay__panel overlay--left">
+            <button class="btn" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay__panel overlay--right">
+            <button class="btn" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const signInBtn = document.getElementById("signIn");
+      const signUpBtn = document.getElementById("signUp");
+      const container = document.querySelector(".container");
+
+      signInBtn.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+      });
+
+      signUpBtn.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+      });
+
+      function validateSignUpForm() {
+        const phoneInput = document.querySelector('input[name="phone"]');
+        if (!phoneInput.checkValidity()) {
+          alert("Please enter a valid 10-digit phone number.");
+          return false;
+        }
+        return true;
+      }
+
+      function validateSignInForm() {
+        const emailInput = document.querySelector('input[name="email"]');
+        const passwordInput = document.querySelector('input[name="password"]');
+        if (emailInput.value === "" || passwordInput.value === "") {
+          alert("Please fill in all the fields.");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

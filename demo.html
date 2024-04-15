@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saree Customization-Concept Visualization</title>
+    <style>
+      /* Basic CSS styling */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #sareeImage {
+        position: bottom;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Saree image with image map -->
+    <img
+      id="sareeImage"
+      src="demo.webp"
+      usemap="#image-map"
+      alt="Saree Image"
+    />
+    <map name="image-map">
+      <area
+        id="blouseArea"
+        alt=""
+        title=""
+        href=""
+        coords="343,141,304,147,293,191,286,233,285,283,309,317,340,307,321,275,326,194,359,179"
+        shape="poly"
+      />
+      <!-- Add more areas with their corresponding colors if necessary -->
+    </map>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var areaCoords = {
+          blouseArea:
+            "343,141,304,147,293,191,286,233,285,283,309,317,340,307,321,275,326,194,359,179", // Coordinates for blouse area
+          // Add more areas with their corresponding coordinates if necessary
+        };
+
+        // Function to update area color
+        function updateAreaColor(areaId, color) {
+          var area = document.getElementById(areaId);
+          area.coords = areaCoords[areaId];
+          area.style.fill = color;
+        }
+
+        // Initialize area colors to red
+        updateAreaColor("blouseArea", "red"); // Change color for blouse area
+      });
+    </script>
+  </body>
+</html>

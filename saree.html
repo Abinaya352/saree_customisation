@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customise YourSelf</title>
+    <link rel="icon" type="image/x-icon" href="logo.jpeg" />
+    <link rel="stylesheet" href="saree.css" />
+  </head>
+  <body>
+    <svg class="container" width="900" height="220">
+      <defs>
+        <linearGradient id="blouseGradient">
+          <stop offset="0" style="stop-color: #fff" />
+        </linearGradient>
+        <linearGradient id="palluGradient">
+          <stop offset="0" style="stop-color: #fff" />
+        </linearGradient>
+        <linearGradient id="bodyGradient">
+          <stop offset="0" style="stop-color: #fff" />
+        </linearGradient>
+        <linearGradient id="borderGradient">
+          <stop offset="0" style="stop-color: #fff" />
+        </linearGradient>
+        <pattern
+          id="body_pattern"
+          patternUnits="userSpaceOnUse"
+          width="100"
+          height="50"
+        >
+          <image
+            id="patternImage"
+            href="pattern\pattern1.png"
+            x="0"
+            y="0"
+            width="100"
+            height="50"
+          />
+        </pattern>
+      </defs>
+      <g>
+        <rect
+          id="blouseRect"
+          x="5"
+          y="7"
+          width="162"
+          height="205"
+          style="fill: url(#blouseGradient); fill-opacity: 0.9"
+        />
+        <rect
+          id="blouseRectPat"
+          x="5"
+          y="7"
+          width="162"
+          height="205"
+          style="fill: url(#blouseGradient); fill-opacity: 0.1"
+        />
+        <rect
+          id="palluRect"
+          x="170"
+          y="7"
+          width="250"
+          height="205"
+          style="fill: url(#palluGradient); fill-opacity: 0.9"
+        />
+        <rect
+          id="palluRectPat"
+          x="170"
+          y="7"
+          width="250"
+          height="205"
+          style="fill: url(#palluGradient); fill-opacity: 0.1"
+        />
+        <rect
+          id="bodyRect"
+          x="422"
+          y="22"
+          width="470"
+          height="173"
+          style="fill: url(#bodyGradient); fill-opacity: 0.9"
+        />
+        <rect
+          id="bodyRectPat"
+          x="422"
+          y="22"
+          width="470"
+          height="173"
+          style="fill: url(#bodyGradient); fill-opacity: 0.1"
+        />
+        <rect
+          id="borderTopRect"
+          x="422"
+          y="7"
+          width="470"
+          height="15"
+          style="fill: url(#borderGradient); fill-opacity: 0.9"
+        />
+        <rect
+          id="borderTopRectPat"
+          x="422"
+          y="7"
+          width="470"
+          height="15"
+          style="fill: url(#borderGradient); fill-opacity: 0.1"
+        />
+        <rect
+          id="borderBottomRect"
+          x="422"
+          y="198"
+          width="470"
+          height="15"
+          style="fill: url(#borderGradient); fill-opacity: 0.9"
+        />
+        <rect
+          id="borderBottomRectPat"
+          x="422"
+          y="198"
+          width="470"
+          height="15"
+          style="fill: url(#borderGradient); fill-opacity: 0.1"
+        />
+      </g>
+    </svg>
+    <br />
+    <label for="sectionSelect">Choose Section:</label>
+    <select id="sectionSelect">
+      <option value="blouseRect">Blouse</option>
+      <option value="palluRect">Pallu</option>
+      <option value="bodyRect">Body</option>
+      <option value="borderTopRect">Border (Top)</option>
+      <option value="borderBottomRect">Border (Bottom)</option>
+    </select>
+    <label for="patternSelect">Choose Pattern:</label>
+    <select id="patternSelect"></select>
+    <label for="colorInput">Choose Color:</label>
+    <input type="color" id="colorInput" />
+    <label for="gradientCheckbox">Gradient:</label>
+    <input type="checkbox" id="gradientCheckbox" />
+    <input type="button" value="Apply Color" onclick="applyColor()" />
+    <input type="button" value="Apply Pattern" onclick="applyPattern()" />
+    <button id="payment-button">Proceed to Payment</button>
+
+    <script src="saree.js"></script>
+  </body>
+</html>
